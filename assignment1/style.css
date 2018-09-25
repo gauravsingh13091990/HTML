@@ -1,0 +1,11 @@
+#pic{
+	height: 220px;
+	width: 160px;
+	margin-left: 600px;
+	}
+.centre:hover{
+	background-color: blue;
+}
+body{
+	background-color: lightblue; 
+}
