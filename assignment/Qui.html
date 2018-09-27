@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Quiz</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <style>
+	 	.a{
+	 		float: left;
+	 	}
+	 </style>
+</head>
+<body >
+	<div>
+	<div style="width:75%;height:10%;background-color: pink;margin-left: 13%">
+		<div style="background-color: lightblue;margin-left: 5%;height: 100%;width: 20%;float: left">
+				<h3>QUIZ</h3>
+		</div>
+		<div>
+		</div>
+	</div>
+	<div class="row" style="width:75%;background-color: grey;border-radius:5px;border-size:0.4px;border-style: solid;padding-top: 1.8%;padding-bottom: 1.8%; border-color: #a9d9ff;margin-left: 13%">
+		 <div style="background-color:white;height:95%;width:90%;border-style: solid;border-color: grey;border-radius: 0.5%;border-size:0.5%;margin-left: 5%">
+		 	<form id="res" action="/action_page.php" method="get">
+		 		<p id="que" style="margin-left: 2%"></p>
+ 				<p id="abc"></p>
+		 		<p id="disp" style="text-align: center "></p>
+		 	</form>
+		 	</div>
+		 </div>
+</div>
+	
+<script>
+	 	Questions='{"quizlist":[{"question":"Each computer have built in instruction set that it knows how to execute by design?","hint":"Search the web", "option1":"True","option2":"False","option3":"None","answer":"False"},{"question":"India win the world cup 2011?","hint":"One of billionare of USA","option1":"True","option2":"False","option3":"None","answer":"True"},{"question":"Capital  of Australia","hint":"Name starts with C","option1":"London","option2":"Canberra","option3":"Washington","answer":"Canberra" }]}';
+ 	var obj = JSON.parse(Questions);
+ 	var x=document.getElementById("que");
+for(var i in obj.quizlist)
+{
+ 		 x.innerHTML+= "<h4>"+obj.quizlist[i].question+"</h4>" +
+ 		 '<button type="button" class="btn"  onclick=Hint1("'+i+'")>Hint</button><br>'+
+ 		  '<p id="'+i+'" style=background-color:orange;display:none;margin-left:45% >'+obj.quizlist[i].hint+'</p><br>'+
+ 		 '<input type="radio" name="optradio"  value="'+obj.quizlist[i].option1+
+ 		 '"   onclick=checklist(this,"'+i+'")>'+ obj.quizlist[i].option1+ "<br>" +
+ 		 '<input type="radio" name="optradio" value="'+obj.quizlist[i].option2+
+ 		 '" onclick=checklist(this,"'+i+'")>'+
+ 		  obj.quizlist[i].option2+"<br>"+
+ 		  '<input type="radio" name="optradio"  value="'+obj.quizlist[i].option3+
+ 		  '" onclick=checklist(this,"'+i+'")>' +
+ 		   obj.quizlist[i].option3+'<br><br>';
+ 		}
+	// =x;
+	function checklist(a,j) {
+		
+		if(a.value===obj.quizlist[j].answer)
+			document.getElementById("disp").textContent="Correct answer";
+		
+		else
+			document.getElementById("disp").textContent="wrong answer";
+		
+	}
+	function Hint1(ar) {
+		// console.log(2);
+ 		var f=document.getElementById(ar);
+		if(f.style.display==="none"){
+			f.style.display="block";
+		}
+		else{
+			f.style.display="none";
+		}
+	}
+	 </script>
+	
+</body>
+</html>
