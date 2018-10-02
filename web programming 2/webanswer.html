@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> books data</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+.fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+</style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class ="col-md-8">
+        <h1 id="heading"> My News Portal</h1>
+        <div class="row">
+          <div  class="col-md-8">
+            <h2 id="headline1">Headline</h2>
+            <a id ="link1" href="">link</a>
+            <p id="description1">description </p>
+            <p id="author1">Author</p>
+            <p id="published1">publishedAt</p>
+          </div>
+          <div cass="col-md-4">
+            <img id="poster1" src="https://s3.reutersmedia.net/resources/r/?m=02&d=20180525&t=2&i=1265706704&w=1200&r=LYNXNPEE4O01O" class="img-responsive img-rounded" width="200" height="300">
+          </div> 
+        </div>
+        <div class="row">
+          <div  class="col-md-8">
+            <h2 id="headline2">Headline</h2>
+            <a id ="link2" href="">link</a>
+            <p id="description2">description </p>
+            <p id="author2">Author</p>
+            <p id="published2">publishedAt</p>
+          </div>
+          <div cass="col-md-4">
+            <img id="poster2" src="https://thumbor.forbes.com/thumbor/600x315/https%3A%2F%2Fblogs-images.forbes.com%2Fthumbnails%2Fblog_5264%2Fpt_5264_790_o.jpg%3Ft%3D1527239584" class="img-responsive img-rounded" width="200" height="300">
+          </div>
+        </div>
+        <div class="row">
+          <div  class="col-md-8">
+            <h2 id="headline3">Headline</h2>
+            <a id ="link3" href="">link</a>
+            <p id="description3">description </p>
+            <p id="author3">Author</p>
+            <p id="published3">publishedAt</p>
+          </div>
+          <div cass="col-md-4">
+            <img id="poster3" src="https://s3.reutersmedia.net/resources/r/?m=02&d=20180525&t=2&i=1265782669&w=1200&r=LYNXNPEE4O0BM" class="img-responsive img-rounded" width="200" height="300">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <button id="prevBtn" type="button" class="btn btn-primary" onclick="prev()">Prev</button>
+          </div>
+          <div class="col-md-7"></div>
+            <div class="col-md-3">
+              <button id="nextBtn" type="button" class="btn btn-primary" onclick="next()">Next</button>
+            </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+      </div>
+    </div>
+  
+
+      
+    <script type="text/javascript">
+      var newsJSON={
+"status": "ok",
+"totalResults": 20,
+"articles": [
+{
+"source": {
+"id": "reuters",
+"name": "Reuters"
+},
+"author": "Ron Bousso",
+"title": "Oil prices fall as OPEC and Russia weigh output boost",
+"description": "Oil prices fell below $78 a barrel on Friday as OPEC and Russia considered easing supply curbs to offset disruptions in Venezuela and an expected drop in Iranian exports.",
+"url": "https://uk.reuters.com/article/uk-global-oil/oil-prices-fall-as-opec-and-russia-weigh-output-boost-idUKKCN1IQ030",
+"urlToImage": "https://s3.reutersmedia.net/resources/r/?m=02&d=20180525&t=2&i=1265706704&w=1200&r=LYNXNPEE4O01O",
+"publishedAt": "2018-05-25T09:25:56Z"
+},
+{
+"source": {
+"id": null,
+"name": "Forbes.com"
+},
+"author": "Jonathan Berr",
+"title": "Comcast CEO Brian Roberts Mulls Plan To Add Huge Amounts Of Debt",
+"description": "If Comcast makes an all-cash bid for the 21st Century entertainment assets,  its debt load would surge to $164 billion, which is a lot of money since its market capitalization is \"only\" about $149 billion.",
+"url": "https://www.forbes.com/sites/jonathanberr/2018/05/25/comcast-ceo-brian-roberts-mulls-plan-to-gargantuan-amounts-of-debt/",
+"urlToImage": "https://thumbor.forbes.com/thumbor/600x315/https%3A%2F%2Fblogs-images.forbes.com%2Fthumbnails%2Fblog_5264%2Fpt_5264_790_o.jpg%3Ft%3D1527239584",
+"publishedAt": "2018-05-25T09:13:00Z"
+},
+{
+"source": {
+"id": "reuters",
+"name": "Reuters"
+},
+"author": "Julia Fioretti",
+"title": "EU privacy law heralds new era in online data protection",
+"description3": "New European privacy regulations that go into effect on Friday will force companies to be more attentive to how they handle customer data, while bringing consumers both new ways to control their data and tougher enforcement of existing privacy rights.",
+"url": "https://uk.reuters.com/article/us-europe-privacy-gdpr/eu-privacy-law-heralds-new-era-in-online-data-protection-idUKKCN1IQ0K9",
+"urlToImage": "https://s3.reutersmedia.net/resources/r/?m=02&d=20180525&t=2&i=1265782669&w=1200&r=LYNXNPEE4O0BM",
+"publishedAt": "2018-05-25T09:09:46Z"
+},
+{
+"source": {
+"id": "cnbc",
+"name": "CNBC"
+},
+"author": "Reuters",
+"title": "Wesfarmers' two-year UK foray ends with sale of troubled home improvement chain",
+"description": "Australian retail conglomerate Wesfarmers is selling U.K. home improvement chain Homebase for a nominal 1 pound ($1.34) just two years after buying it.",
+"url": "https://www.cnbc.com/2018/05/25/wesfarmers-two-year-uk-foray-ends-with-sale-of-troubled-home-improvement-chain.html",
+"urlToImage": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/05/25/105231502-GettyImages-952911500_1.1910x1000.jpg",
+"publishedAt": "2018-05-25T09:07:00Z"
+},
+{
+"source": {
+"id": "the-wall-street-journal",
+"name": "The Wall Street Journal"
+},
+"author": "Chester Yung",
+"title": "Deripaska Quits Rusal Board as Metals Giant Looks for Sanctions Relief",
+"description": "Rusal said Oleg Deripaska has resigned as a non-executive director, expanding a sweeping overhaul of the company’s management and board in an effort to escape the Trump administration’s sanctions program.",
+"url": "https://www.wsj.com/articles/deripaska-quits-rusal-board-as-metals-giant-looks-for-sanctions-relief-1527234183",
+"urlToImage": "https://images.wsj.net/im-11950/social",
+"publishedAt": "2018-05-25T07:46:32Z"
+},
+{
+"source": {
+"id": null,
+"name": "Mercurynews.com"
+},
+"author": "Erin Baldassari",
+"title": "BART rejects Livermore expansion; mayor vows rail connection",
+"description": "The agency will instead defer to a newly created regional rail authority that has plans to construct a commuter rail from the Central Valley to the BART station at Dublin Pleasanton.",
+"url": "https://www.mercurynews.com/2018/05/24/bart-rejects-livermore-expansion-mayor-vows-rail-connection/",
+"urlToImage": "https://www.mercurynews.com/wp-content/uploads/2018/05/ebt-l-livbart-05xx-3.jpg?w=1024&h=686",
+"publishedAt": "2018-05-25T05:54:07Z"
+},
+{
+"source": {
+"id": null,
+"name": "Seekingalpha.com"
+},
+"author": "Giovanni DiMauro",
+"title": "Chesapeake Rallies 70% In May, Here Is The New Trading Range",
+"description": "Chesapeake Energy hits my price target of $5 set in February. CEO navigating company to profits. Increased production on lower CAP EX paying off. The Bottom is",
+"url": "https://seekingalpha.com/article/4177031-chesapeake-rallies-70-percent-may-new-trading-range",
+"urlToImage": "https://static.seekingalpha.com/uploads/2018/5/24/984670-15272101788250334_origin.png",
+"publishedAt": "2018-05-25T05:41:48Z"
+},
+{
+"source": {
+"id": "bloomberg",
+"name": "Bloomberg"
+},
+"author": "David Fickling",
+"title": "Uber's Ghost in the Self-Driving Machine",
+"description": "A report into the fatal Arizona crash shows its system was far from genuinely autonomous.",
+"url": "https://www.bloomberg.com/view/articles/2018-05-25/uber-s-ghost-in-the-self-driving-machine-exposed",
+"urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iwKj3a2NRU14/v1/1200x801.jpg",
+"publishedAt": "2018-05-25T05:01:02Z"
+},
+{
+"source": {
+"id": "techcrunch",
+"name": "TechCrunch"
+},
+"author": "Megan Rose Dickey",
+"title": "Lime, Bird and Spin have to temporarily remove scooters from SF",
+"description": "The San Francisco Municipal Transportation Agency has officially made available its permit application for electric scooters to operate in the city as part of a one-year pilot program. Part of that means companies like Bird, Lime and Spin will need to at leas…",
+"url": "https://techcrunch.com/2018/05/24/bird-lime-spin-electric-scooters-san-francisco/",
+"urlToImage": "https://techcrunch.com/wp-content/uploads/2018/03/img_0875-e1527220549810.jpg?w=638",
+"publishedAt": "2018-05-25T04:13:26Z"
+},
+{
+"source": {
+"id": "reuters",
+"name": "Reuters"
+},
+"author": "Anne Marie Roantree",
+"title": "Samsonite slides for second day on short-seller attack, some analysts unfazed",
+"description": "Shares in Samsonite International plunged for a second straight day on Friday, bringing its losses to a fifth of market value, after a short seller accused it of questionable accounting practices and poor corporate governance.",
+"url": "https://www.reuters.com/article/us-samsonite-intl-short-seller/samsonite-slides-for-second-day-on-short-seller-attack-some-analysts-unfazed-idUSKCN1IQ09V",
+"urlToImage": "https://s4.reutersmedia.net/resources/r/?m=02&d=20180525&t=2&i=1265735017&w=1200&r=LYNXNPEE4O079",
+"publishedAt": "2018-05-25T03:03:28Z"
+},
+{
+"source": {
+"id": null,
+"name": "Lmtonline.com"
+},
+"author": "Kathy Orton, The Washington Post",
+"title": "Mortgage rates have been rising at a pace not seen in almost 50 years",
+"description": "Mortgage rates continued their upward march this week, extending the most prolonged increase in rates in 46 years. According to the latest data released Thursday by Freddie Mac, the 30-year fixed-rate average climbed to 4.66 percent with an average 0.4 point.",
+"url": "https://www.lmtonline.com/business/article/Mortgage-rates-have-been-rising-at-a-pace-not-12940865.php",
+"urlToImage": "https://s.hdnux.com/photos/42/61/35/9115471/3/rawImage.jpg",
+"publishedAt": "2018-05-25T01:46:00Z"
+},
+{
+"source": {
+"id": "reuters",
+"name": "Reuters"
+},
+"author": "Hideyuki Sano",
+"title": "Shares recover as North Korea's conciliatory stance calms nerves",
+"description": "Global shares were on the mend on Friday as Pyongyang's measured response to U.S. President Donald Trump's announcement to call off a key summit with North Korea healed market sentiment, although investors remained cautious.",
+"url": "https://www.reuters.com/article/us-global-markets/shares-recover-as-north-koreas-conciliatory-stance-calms-nerves-idUSKCN1IQ05V",
+"urlToImage": "https://s2.reutersmedia.net/resources/r/?m=02&d=20180525&t=2&i=1265715453&w=1200&r=LYNXNPEE4O053",
+"publishedAt": "2018-05-25T01:16:36Z"
+},
+{
+"source": {
+"id": "reuters",
+"name": "Reuters"
+},
+"author": "Jeffrey Dastin",
+"title": "Oregon family finds Amazon's Alexa has a mind of her own",
+"description": "A Portland, Oregon, family has learned what happens when Amazon.com Inc's (AMZN.O) popular voice assistant Alexa is lost in translation.",
+"url": "https://www.reuters.com/article/us-amazon-com-alexa/oregon-family-finds-amazons-alexa-has-a-mind-of-her-own-idUSKCN1IQ05B",
+"urlToImage": "https://s4.reutersmedia.net/resources/r/?m=02&d=20180525&t=2&i=1265716533&w=1200&r=LYNXNPEE4O04U",
+"publishedAt": "2018-05-25T01:11:40Z"
+},
+{
+"source": {
+"id": "cnn",
+"name": "CNN"
+},
+"author": "Dylan Byers",
+"title": "PACIFIC • Elon Musk is humiliating himself",
+"description": "The new CNNMoney newsletter about the center of change and innovation.",
+"url": "http://money.cnn.com/2018/05/24/technology/pacific-newsletter/index.html",
+"urlToImage": "https://i2.cdn.turner.com/money/dam/assets/180524122832-pacific-elon-musk-2-780x439.jpg",
+"publishedAt": "2018-05-24T21:36:00Z"
+},
+{
+"source": {
+"id": null,
+"name": "Abcactionnews.com"
+},
+"author": "WFTS Webteam",
+"title": "SeaWorld, Busch Gardens offer free admission to US veterans and their families",
+"description": "SeaWorld and Busch Gardens announced it’s offering free admission to U.S. veterans and their families this summer!",
+"url": "https://www.abcactionnews.com/lifestyle/taste-and-see/seaworld-busch-gardens-offer-free-admission-to-us-veterans-and-their-families",
+"urlToImage": "https://mediaassets.abcactionnews.com/photo/2018/05/24/military-seaworld-busch-gardens-pic_1527193784183_87944910_ver1.0_900_675.jpg",
+"publishedAt": "2018-05-24T20:23:34Z"
+},
+{
+"source": {
+"id": "usa-today",
+"name": "USA Today"
+},
+"author": "Ben Mutzabaugh",
+"title": "Delta Air Lines will fly to India (again) in 2019",
+"description": "Delta said recent talks between the U.S. and the Middle East nations of Qatar and the United Arab Emirates (UAE) allowed it to again consider India.",
+"url": "https://www.usatoday.com/story/travel/flights/todayinthesky/2018/05/24/delta-air-lines-india-non-stop-flights-mumbai/641961002/",
+"urlToImage": "https://www.gannett-cdn.com/-mm-/2862dba527ac76882f542209a0f5693507a51e89/c=0-113-3500-2090&r=x1683&c=3200x1680/local/-/media/2018/05/24/USATODAY/USATODAY/636627725214253813-GTY-452532224.jpg",
+"publishedAt": "2018-05-24T19:30:27Z"
+},
+{
+"source": {
+"id": "reuters",
+"name": "Reuters"
+},
+"author": "Tina Bellon",
+"title": "J&J must pay $4 million in punitive damages in latest asbestos cancer trial",
+"description": "A California jury on Thursday ordered Johnson & Johnson to pay $4 million in punitive damages to a woman who said she developed cancer after being exposed to asbestos in the company's baby powder, pushing the total damages award in the case to $25.7 million.",
+"url": "https://www.reuters.com/article/us-johnson-johnson-cancer-lawsuit/jj-must-pay-4-million-in-punitive-damages-in-latest-asbestos-cancer-trial-idUSKCN1IP3C2",
+"urlToImage": "https://s2.reutersmedia.net/resources/r/?m=02&d=20180524&t=2&i=1265617376&w=1200&r=LYNXNPEE4N20G",
+"publishedAt": "2018-05-24T18:59:01Z"
+},
+{
+"source": {
+"id": "usa-today",
+"name": "USA Today"
+},
+"author": "Ben Mutzabaugh",
+"title": "Report: United Airlines reaches settlement for dog that died in overhead bin",
+"description": "United has settled with a family whose dog died after being placed in overhead bin on one of the carrier’s flight, the airline confirmed Thursday.",
+"url": "https://www.usatoday.com/story/travel/flights/todayinthesky/2018/05/24/united-airlines-kokito-dead-dog-overhead-bin-settles/641322002/",
+"urlToImage": "https://www.gannett-cdn.com/-mm-/f8a75661a85fd634d36aaac2bcb24b2fa8abcc08/c=0-118-1200-796&r=x1683&c=3200x1680/local/-/media/2018/05/24/USATODAY/USATODAY/636627640788417920-2017-USAT-June-8.jpg",
+"publishedAt": "2018-05-24T17:37:54Z"
+
+}
+]
+}
+   
+  // = JSON.parse(newsJSON);
+
+   function display1(newsID){
+    news =newsJSON.articles[newsID];
+    document.getElementById("headline1").innerHTML=news.title;
+    document.getElementById("link1").innerHTML =news.url;
+   // document.getElementById("headline2").innerHTML=news.title2;
+   // document.getElementById("headline3").innerHTML=news.title;
+    document.getElementById("description1").innerHTML=news.description;
+    //document.getElementById("description2").innerHTML=news.description;
+    //document.getElementById("description3").innerHTML=news.description;
+    document.getElementById("poster1").src = news.urlToImage;
+    document.getElementById("author1").innerHTML = news.author;
+    document.getElementById("published1").innerHTML = news.publishedAt;
+
+  }
+  
+  display1(0);
+  
+ 
+  function display2(newsID){
+     news2 =newsJSON.articles[newsID];
+    //document.getElementById("headline1").innerHTML=news.title1;
+    document.getElementById("headline2").innerHTML=news2.title;
+    document.getElementById("link2").innerHTML=news.url;
+    //document.getElementById("description1").innerHTML=news.description1;
+    document.getElementById("description2").innerHTML=news2.description;
+    //document.getElementById("description3").innerHTML=news.description3;
+    document.getElementById("author2").innerHTML = news2.author;
+    document.getElementById("poster2").src = news2.urlToImage;
+    
+    document.getElementById("published1").innerHTML = news.publishedAT;
+
+  }
+  display2(1)
+  function display3(newsID){
+     news3 =newsJSON.articles[newsID];
+    //document.getElementById("headline1").innerHTML=news.title1;
+    document.getElementById("headline3").innerHTML=news3.title;
+    document.getElementById("link3").innerHTML=news3.url;
+    //document.getElementById("description1").innerHTML=news.description1;
+    document.getElementById("description3").innerHTML=news3.description;
+    //document.getElementById("description3").innerHTML=news.description3;
+    document.getElementById("author3").innerHTML = news3.author;
+    document.getElementById("poster3").src = news3.urlToImage;
+    
+    document.getElementById("published3").innerHTML = news3.publishedAt;
+
+  }
+  display3(2)
+  var currentnews = 3
+  function setButtons() {
+    newsCnt = newsJSON.articles.length;
+      
+      // disable prev when it is the first movie
+      if (currentnews== 3)
+        document.getElementById("prevBtn").disabled = true;
+
+      // disable next when the current movie is the last one in the list 
+      if (currentnews == newsCnt - 3)
+        document.getElementById("nextBtn").disabled = true;
+
+      // enable the prev button when the current movie is not the first one
+      if (currentnews > 3)
+        document.getElementById("prevBtn").disabled = false;
+
+      // enable the next button when the current movie is not the last one
+      if (currentnews < newsCnt - 3)
+        document.getElementById("nextBtn").disabled = false;
+    }
+    /* call init to disbale the buttons */
+    setButtons();
+
+    // show the next movie
+    function next() {
+      display1(currentnews+1);
+      display2(currentnews++);
+      display3(currentnews+2)
+      setButtons();
+    }
+
+    // show the previous movie
+    function prev() {
+      display1(currentnews-1);
+      display2(currentnews--);
+      display3(currentnews-2);
+      setButtons();
+    }
+    function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+  }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+     
+
+  </body>
+ </html>
+
+
+
+

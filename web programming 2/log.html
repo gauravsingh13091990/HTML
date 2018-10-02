@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> books data</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1>Login Page for news</h1>
+            <form name="login">
+                Username<input type="text" name="userid"/>
+                <br>
+                <br>
+                Password<input type="password" name="pswrd"/>
+                <input type="button" onclick="check(this.form)" value="Login"/>
+                <input type="reset" value="Cancel"/>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <script language="javascript">
+        function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "gaurav" && form.pswrd.value == "12345") {
+                    window.open('webanswer.html')/*opens the target page while Id & password matches*/
+                }
+                else {
+                    alert("Error Password or Username")/*displays error message*/
+                }
+            }
+        </script>
+    </body>
+</html>
